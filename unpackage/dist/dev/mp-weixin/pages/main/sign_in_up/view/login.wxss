@@ -1,0 +1,59 @@
+.loginBanner.data-v-3c64c8fe {
+  text-align: left;
+  padding: 48rpx 32rpx;
+}
+.loginBanner .loginText.data-v-3c64c8fe {
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.loginBanner .loginTextSmall.data-v-3c64c8fe {
+  font-size: 34rpx;
+  padding-top: 16rpx;
+}
+.loginForm.data-v-3c64c8fe {
+  padding: 0 48rpx;
+}
+.loginForm .loginItem.data-v-3c64c8fe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 155rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+.loginForm .loginItem .loginInput.data-v-3c64c8fe {
+  width: 100%;
+  padding-top: 65rpx;
+  height: 90rpx;
+}
+.loginForm .loginTextItem.data-v-3c64c8fe {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: left;
+  -webkit-align-items: left;
+          align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.loginForm .loginTextItem .loginTextBottom.data-v-3c64c8fe {
+  height: 42px;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 42px;
+  color: #353535;
+  opacity: 1;
+}
+.loginButton.data-v-3c64c8fe {
+  width: 654rpx;
+  height: 96rpx;
+  background: #3f74ff;
+  opacity: 1;
+  -webkit-border-radius: 100rpx;
+          border-radius: 100rpx;
+}
+

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/main/a_index/index",
+    "pages/main/e_mall/index",
+    "pages/main/my_info/index",
+    "pages/main/order_mgt/index",
+    "pages/main/sign_in_up/index",
+    "pages/main/sign_in_up/view/login",
+    "pages/modules/platform_app/settled_enterprise/index",
+    "pages/modules/platform_app/settled_enterprise/view/enterprise_detail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#456CFA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/main/a_index/index",
+        "iconPath": "static/images/tabs/homepage.png",
+        "selectedIconPath": "static/images/tabs/homepage-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/main/e_mall/index",
+        "iconPath": "static/images/tabs/place-order.png",
+        "selectedIconPath": "static/images/tabs/place-order-selected.png",
+        "text": "云商城"
+      },
+      {
+        "pagePath": "pages/main/order_mgt/index",
+        "iconPath": "static/images/tabs/order-mgt.png",
+        "selectedIconPath": "static/images/tabs/order-mgt-selected.png",
+        "text": "订单管理"
+      },
+      {
+        "pagePath": "pages/main/my_info/index",
+        "iconPath": "static/images/tabs/my-info.png",
+        "selectedIconPath": "static/images/tabs/my-info-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,1 @@
+<view class="content"><view class="list"><view class="hrstyle _hr"></view><block wx:for="{{list}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><list-item vue-id="{{'92d7351a-1-'+__i0__}}" itemInfo="{{item}}" bind:__l="__l"></list-item></block></view></view>

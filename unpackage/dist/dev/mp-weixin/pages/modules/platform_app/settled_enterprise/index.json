@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "入驻企业",
+  "usingComponents": {
+    "list-item": "/pages/modules/platform_app/settled_enterprise/components/item"
+  }
+}

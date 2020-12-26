@@ -1,0 +1,39 @@
+
+.inputStyle {
+	padding: 30rpx;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+}
+.inputBorder {
+	border: 1rpx solid #DADADA;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	line-height: 32rpx;
+	height: 32rpx;
+	padding: 16rpx;
+}
+.selectBox {
+	margin-top: 34rpx;
+	height: 28rpx;
+	line-height: 28rpx;
+	/* border-left: 2rpx solid #aaa; */
+	width: 100%;
+	text-align: center;
+}
+.list {
+	padding-left: 10px;
+}
+.hrstyle {
+	height: 1px;
+	border: none;
+	border-top: 1px solid rgba(230, 232, 235, 1);
+}
+.loading {
+	color: #808080;
+	text-align: center;
+	margin-top: 10px;
+}
+.selectRow {
+	margin-top: -10px;
+}
+

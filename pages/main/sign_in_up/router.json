@@ -1,0 +1,13 @@
+{
+	"pages": [{
+		"path": "pages/main/sign_in_up/index",
+		"style": {
+			"navigationBarTitleText": "登录|注册"
+		}
+	},{
+		"path": "pages/main/sign_in_up/view/login",
+		"style": {
+			"navigationBarTitleText": "登录"
+		}
+	}]
+}
