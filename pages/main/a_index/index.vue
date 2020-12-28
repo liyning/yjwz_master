@@ -1,9 +1,15 @@
 <template>
-	<view class="content" @click="goToModules">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="homePage">
+		<view class="hp-nav">
+			<view class="hp-nav-item" v-for="(item, index) in modulesList" :key="index">
+				<view @click="goToModules(item)">
+					<image class="hp-nav-itemImg" :src="item.iconPath" mode="widthFix"></image>
+					<text class="hp-nav-text">{{item.text}}</text>
+				</view>
+			</view>
 		</view>
+
+
 	</view>
 </template>
 
@@ -11,17 +17,33 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				modulesList: []
 			}
 		},
 		onLoad() {
-
+			this.getModuleList()
 		},
+		onShow() {},
 		methods: {
-			goToModules() {
-				console.log('tttt===========')
+			getModuleList() {
+				let modulesJson = require('@/package-lock.json');
+				console.log("cityJson: ", modulesJson);
+				this.modulesList = [];
+				Object.keys(modulesJson.dependencies).forEach(key => {
+					if (new RegExp("^module_.*$").test(key)) {
+						let getModuleConfig = require('@/pages/modules/platform_app/' + key + '/module.json');
+						getModuleConfig.iconPath = require('@/pages/modules/platform_app/' + key + '/static/logo.png');
+						this.modulesList.push(getModuleConfig);
+					}
+				});
+				console.log("moduleList", this.modulesList);
+			},
+			goToModules(pageInfo) {
+				let pagePath = pageInfo.pagePath;
+				console.log('test-------------', pagePath)
 				uni.navigateTo({
-					url: '../../modules/platform_app/settled_enterprise/index?key=111&key2=222'
+					url: pagePath
 				})
 			}
 		}
@@ -29,29 +51,40 @@
 </script>
 
 <style>
-	.content {
+	page {
+		background: #F4F4F4;
+	}
+
+	.hp-img {
+		width: 750rpx;
+	}
+
+	.hp-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 30rpx;
+	}
+
+	.hp-nav-item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+	.hp-nav-itemImg {
+		width: 112rpx;
 	}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	.hp-nav-text {
+		font-size: 24rpx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		line-height: 33rpx;
+		color: rgba(102, 102, 102, 1);
+		opacity: 1;
+		display: block;
+		text-align: center;
 	}
 </style>

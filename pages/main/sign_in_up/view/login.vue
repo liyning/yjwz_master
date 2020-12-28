@@ -149,7 +149,7 @@
 								} else {
 									uni.setStorageSync("auth", false);
 								}
-								if (loginUser.status == 3) {
+								if (res.data.loginUser.status == 3) {
 									uni.setStorageSync("isBank", true);
 								} else {
 									uni.setStorageSync("isBank", false);
@@ -199,14 +199,14 @@
 							if (this.lastPath.indexOf('%3F') > -1) {
 								this.lastPath = this.lastPath.replace('%3F', '?')
 							}
-							// uni.redirectTo({
-							// 	url: '../' + this.lastPath
-							// })
+							uni.redirectTo({
+								url: '../../' + this.lastPath
+							})
 							
 						} else {
-							uni.switchTab({
-								url: '../home-page/index'
-							})
+							 uni.switchTab({
+							 	url: '../../a_index/index'
+							 })
 						}
 					} else {
 						uni.showToast({

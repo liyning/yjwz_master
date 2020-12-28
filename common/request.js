@@ -2,6 +2,7 @@ import urlConfig from '@/common/config.js'
 import {formatGetUri} from '@/common/util.js'
 
 const request = {}
+const loginPath = '/pages/main/sign_in_up/view/login'
 
 request.globalRequest = (url, method, params, data, dataType) => {
 	let loginTime = uni.getStorageSync('loginTime')
@@ -21,7 +22,7 @@ request.globalRequest = (url, method, params, data, dataType) => {
 					if (res.confirm) {
 						console.log('用户点击确定');
 						uni.navigateTo({
-							url: "/pages/login/login"
+							url: loginPath
 						})
 					} else if (res.cancel) {
 						console.log('用户点击取消');
@@ -59,7 +60,7 @@ request.globalRequest = (url, method, params, data, dataType) => {
 		if (res[1]) {
 			if(res[1].data.code == 998){
 				uni.navigateTo({
-					url: '/pages/login/login'
+					url: loginPath
 				})
 				return
 			}
