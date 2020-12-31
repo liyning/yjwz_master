@@ -32,7 +32,7 @@
 				this.modulesList = [];
 				Object.keys(modulesJson.devDependencies).forEach(key => {
 					if (new RegExp("^module_.*$").test(key)) {
-						let getModuleConfig = require('@/pages/modules/platform_app/' + key + '/module.json');
+						let getModuleConfig = require('@/pages/modules/platform_app/' + key + '/tabBar.json');
 						getModuleConfig.iconPath = require('@/pages/modules/platform_app/' + key + '/static/logo.png');
 						this.modulesList.push(getModuleConfig);
 					}
