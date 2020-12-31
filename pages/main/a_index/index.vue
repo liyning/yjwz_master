@@ -27,10 +27,10 @@
 		onShow() {},
 		methods: {
 			getModuleList() {
-				let modulesJson = require('@/package-lock.json');
+				let modulesJson = require('@/package.json');
 				console.log("cityJson: ", modulesJson);
 				this.modulesList = [];
-				Object.keys(modulesJson.dependencies).forEach(key => {
+				Object.keys(modulesJson.devDependencies).forEach(key => {
 					if (new RegExp("^module_.*$").test(key)) {
 						let getModuleConfig = require('@/pages/modules/platform_app/' + key + '/module.json');
 						getModuleConfig.iconPath = require('@/pages/modules/platform_app/' + key + '/static/logo.png');

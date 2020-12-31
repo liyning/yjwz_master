@@ -1,0 +1,27 @@
+{
+  "name": "master-frame",
+  "version": "1.0.0",
+  "description": "主框架",
+  "main": "main.js",
+  "dependencies": {
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.0-beta.6"
+  },
+  "devDependencies": {
+    "module_lyn03": "^1.0.1",
+    "uni-dev-tools": "^1.0.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liyning/yjwz_master.git"
+  },
+  "author": "liyaning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liyning/yjwz_master/issues"
+  },
+  "homepage": "https://github.com/liyning/yjwz_master#readme"
+}
