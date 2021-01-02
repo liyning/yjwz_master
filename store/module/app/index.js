@@ -3,7 +3,7 @@ export default {
 	namespaced:true,
 	/* 属性值 */
 	state: {
-		
+		user:'张三'
 	},
 	
 	/* 
